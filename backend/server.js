@@ -34,7 +34,14 @@ app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
 // Setting up middlewares
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+  // origin: 'https://job-board-platofrm.onrender.com', allow all origins
+  origin: '*',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
 app.use(express.json());
 app.use(passportConfig.initialize());
 
