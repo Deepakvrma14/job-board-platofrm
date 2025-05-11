@@ -1,4 +1,4 @@
-export const server = "https://job-board-platofrm.onrender.com:4445";
+export const server = "https://job-board-platofrm.onrender.com";
 
 const apiList = {
   login: `${server}/auth/login`,
